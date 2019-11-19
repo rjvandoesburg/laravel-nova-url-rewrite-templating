@@ -12,8 +12,8 @@
         "php": "^7.2",
         "laravel/framework": "~5.8||^6.0",
         "laravel/nova": "*",
-        "rjvandoesburg/laravel-nova-url-rewrite": "*",
-        "rjvandoesburg/laravel-nova-templating": "*"
+        "rjvandoesburg/laravel-nova-url-rewrite": "^1.0",
+        "rjvandoesburg/laravel-nova-templating": "^1.0"
     },
     "autoload": {
         "psr-4": {
