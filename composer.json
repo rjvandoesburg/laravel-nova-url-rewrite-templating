@@ -1,0 +1,33 @@
+{
+    "name": "rjvandoesburg/laravel-nova-url-rewrite-templating",
+    "description": "A package that combines the power of Laravel Nova Templating and Laravel Nova Url Rewrites",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robert-John van Doesburg",
+            "email": "rjvandoesburg@guapa.nl"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "laravel/framework": "~5.8||^6.0",
+        "laravel/nova": "*",
+        "rjvandoesburg/laravel-nova-url-rewrite": "*",
+        "rjvandoesburg/laravel-nova-templating": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rjvandoesburg\\NovaUrlRewriteTemplating\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rjvandoesburg\\NovaUrlRewriteTemplating\\NovaUrlRewriteTemplatingServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
