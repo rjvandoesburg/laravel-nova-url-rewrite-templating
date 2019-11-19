@@ -69,13 +69,14 @@ class TemplateController extends TemplateBaseController
 
             if ($urlRewrite->isRedirect()) {
                 return response()->json([
-                    'redirect' => $urlRewrite->target_path,
-                    'status' => $urlRewrite->getRedirectType()
+                    'redirect'   => $urlRewrite->target_path,
+                    'status'     => $urlRewrite->getRedirectType(),
+                    'isExternal' => parse_url($urlRewrite->target_path, PHP_URL_HOST) !== null,
                 ]);
             }
 
             return response()->json([
-                'templates' => $this->getTemplates($urlRewrite)
+                'templates' => $this->getTemplates($urlRewrite),
             ]);
         } catch (\Throwable $exception) {
             return response()->json([
