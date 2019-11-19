@@ -29,14 +29,14 @@ The package will automatically register itself.
 
 ### Routing
 
-Instead of using the route provided in [Laravel Nova templating](https://github.com/rjvandoesburg/laravel-nova-templating) you need to add the following to your routes file
+Instead of using the route provided in [Laravel Nova templating](https://github.com/rjvandoesburg/laravel-nova-templating) you need to add the following to your routes file (preferably `api.php`)
 ```php
 Route::NovaUrlRewriteTemplates();
 ```
 
 Which will add the following routes:
-* `api/template-api/{resource}/{resourceId}`
-* `api/template-api/{templateUrl?}`
+* `/template-api/{resource}/{resourceId}`
+* `/template-api/{templateUrl?}`
 
 If the resource route returns a 404 it will try the other url as well.
 
